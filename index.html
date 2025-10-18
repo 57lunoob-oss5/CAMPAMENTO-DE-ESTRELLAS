@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campamento de Estrellas</title>
+  <meta name="description" content="Campamento de Estrellas - descubre la magia de brillar con tu propia luz. Campamentos y talleres para jóvenes 12-18 años." />
+  <!-- Google font (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fcfbf7;
+      --accent:#1f6feb;
+      --accent-dark:#0d4fb2;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --green:#0ea5a3;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#f7fbff);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* layout */
+    .container{max-width:var(--maxw);margin:28px auto;padding:20px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:64px;height:64px;object-fit:cover;border-radius:12px;border:2px solid rgba(0,0,0,0.06)}
+    .brand h1{font-size:20px;margin:0}
+    nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero-card{background:var(--card);padding:28px;border-radius:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .slogan{display:flex;align-items:center;gap:12px}
+    .slogan .star{width:56px;height:56px;background:linear-gradient(180deg,#ffd86b,#ffb86b);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .hero h2{margin:8px 0 10px;font-size:28px;color:var(--accent-dark)}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{margin-top:16px;display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn.secondary{background:#fff;border:1px solid rgba(17,24,39,0.06);color:var(--accent-dark)}
+
+    /* services grid */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 12px rgba(15,23,42,0.04)}
+    .card h3{margin:0 0 8px;color:var(--accent-dark)}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* two-col section */
+    .two-col{display:grid;grid-template-columns:1fr 380px;gap:22px;margin-top:28px}
+    .canvas, .dofa{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 12px rgba(15,23,42,0.04)}
+    .small-title{font-weight:700;color:var(--accent-dark);font-size:14px;margin-bottom:8px}
+    ul.simple{padding-left:18px;color:var(--muted);line-height:1.6}
+
+    /* team + contact */
+    .team{display:flex;gap:12px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:#eef2ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-dark)}
+    footer{margin-top:36px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; }
+      .two-col{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Reemplaza logo.png por tu logo en carpeta assets -->
+        <img src="assets/logo.png" alt="Logo Campamento de Estrellas" onerror="this.style.display='none'">
+        <div>
+          <h1>Campamento de Estrellas</h1>
+          <div style="color:var(--muted);font-size:13px">Descubre la magia de brillar con tu propia luz</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#canvas">Canvas</a>
+        <a href="#dofa">DOFA</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="slogan">
+          <div class="star">★</div>
+          <div>
+            <h2>Descubre la magia de brillar con tu propia luz</h2>
+            <p>Campamento de Estrellas ayuda a jóvenes (12–18 años) a descubrir y potenciar sus talentos para convertirlos en proyectos de vida.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <strong>Qué ofrecemos</strong>
+          <ul class="simple">
+            <li>Programas recreativos y formativos por temporada.</li>
+            <li>Talleres, coaching y retos de talento.</li>
+            <li>Alianzas con colegios y apoyo para proyectos de vida.</li>
+          </ul>
+        </div>
+
+        <div class="cta">
+          <button class="btn" onclick="document.querySelector('#contacto').scrollIntoView({behavior:'smooth'})">Inscripciones</button>
+          <button class="btn secondary" onclick="document.querySelector('#servicios').scrollIntoView({behavior:'smooth'})">Ver servicios</button>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
+        <div class="hero-card" style="padding:16px;display:flex;flex-direction:column;gap:8px">
+          <h3 style="margin:0;color:var(--accent-dark)">Misión</h3>
+          <p style="margin:0;color:var(--muted)">Acompañar a jóvenes (12–18) en el descubrimiento y fortalecimiento de sus talentos para que los transformen en proyectos de vida mediante experiencias educativas y recreativas.</p>
+        </div>
+        <div class="hero-card" style="padding:16px;display:flex;flex-direction:column;gap:8px">
+          <h3 style="margin:0;color:var(--accent-dark)">Visión</h3>
+          <p style="margin:0;color:var(--muted)">Ser el campamento líder en formación de talentos juveniles en Colombia, inspirando a cada joven a brillar con su propia luz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" style="margin-top:22px">
+      <div class="small-title">Servicios destacados</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Campamentos de Talento</h3>
+          <p>Espacios recreativos para descubrir y fortalecer talentos juveniles.</p>
+        </div>
+        <div class="card">
+          <h3>Talleres Creativos</h3>
+          <p>Arte, música, liderazgo y comunicación para impulsar la creatividad.</p>
+        </div>
+        <div class="card">
+          <h3>Coaching Juvenil</h3>
+          <p>Acompañamiento para orientar proyecto de vida y crecimiento emocional.</p>
+        </div>
+        <div class="card">
+          <h3>Retos y Eventos</h3>
+          <p>Competencias y presentaciones donde los jóvenes muestran sus habilidades.</p>
+        </div>
+        <div class="card">
+          <h3>Programas Escolares</h3>
+          <p>Actividades formativas para colegios en liderazgo y convivencia.</p>
+        </div>
+        <div class="card">
+          <h3>Campamentos Temáticos</h3>
+          <p>Experiencias por temporada en arte, innovación o deporte.</p>
+        </div>
+        <div class="card">
+          <h3>Recreación Outdoor</h3>
+          <p>Dinámicas al aire libre que fortalecen trabajo en equipo y confianza.</p>
+        </div>
+        <div class="card">
+          <h3>Formación de Líderes</h3>
+          <p>Entrenamientos para jóvenes que quieran motivar y guiar a otros.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANVAS + DOFA -->
+    <section id="canvas" class="two-col">
+      <div class="canvas">
+        <div class="small-title">CANVAS - Resumen</div>
+        <p><strong>Socios clave:</strong> Colegios, organizaciones juveniles, fundaciones y aliados logísticos.</p>
+        <p><strong>Actividades clave:</strong> Diseño de programa, promoción, talleres y gestión de recursos.</p>
+        <p><strong>Propuesta de valor:</strong> Experiencias que combinan recreación, liderazgo y aprendizaje experiencial para convertir talentos en proyectos de vida.</p>
+        <p><strong>Recursos:</strong> Personal capacitado, instalaciones y materiales.</p>
+        <p><strong>Canales:</strong> Redes sociales, colegios y eventos presenciales.</p>
+        <p><strong>Ingresos:</strong> Inscripciones, patrocinios, donaciones, servicios adicionales y merchandising.</p>
+      </div>
+									<img src="file:///C:/Users/damar/OneDrive/Desktop/Nueva%20carpeta%20(3)/IMG/c0525129-3f2a-4e62-a496-429a44154cb6.jpeg"width="250" height="200"></a>
+
+      <div class="dofa">
+        <div class="small-title">DOFA (palabras clave)</div>
+        <ul class="simple">
+          <li><strong>Fortaleza:</strong> Innovación</li>
+          <li><strong>Debilidad:</strong> Recursos limitados</li>
+          <li><strong>Oportunidad:</strong> Apoyo institucional</li>
+          <li><strong>Amenaza:</strong> Competencia</li>
+        </ul>
+        <div style="margin-top:12px">
+          <strong>Breve estrategia:</strong>
+          <p style="margin:6px 0;color:var(--muted)">Aprovechar la innovación y las alianzas con colegios para captar subvenciones y patrocinadores que mitiguen la limitación de recursos frente a la competencia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="equipo" style="margin-top:28px">
+      <div class="small-title">Equipo</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:240px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04)">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="avatar">SA</div>
+            <div>
+              <strong>Sharik Amaya</strong><br><span style="color:var(--muted)">Co-fundador — Programas y talento</span>
+            </div>
+          </div>
+          <p style="color:var(--muted);margin-top:10px">Responsable del diseño de actividades, talleres y mentoría.</p>
+        </div>
+
+        <div style="flex:1;min-width:240px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04)">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="avatar">SC</div>
+            <div>
+              <strong>Stiven Cely</strong><br><span style="color:var(--muted)">Co-fundador — Logística y operaciones</span>
+            </div>
+          </div>
+          <p style="color:var(--muted);margin-top:10px">Encargado de la logística de campamentos, alianzas y seguridad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS / FUENTES -->
+    <section style="margin-top:28px">
+      <div class="small-title">Fuentes de ingreso & costos clave</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:10px">
+        <div style="flex:1;min-width:260px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04)">
+          <strong>Fuentes de ingreso</strong>
+          <ul class="simple">
+            <li>Inscripción de participantes</li>
+            <li>Patrocinios y convenios</li>
+            <li>Donaciones y subvenciones</li>
+            <li>Servicios adicionales y merchandising</li>
+          </ul>
+        </div>
+        <div style="flex:1;min-width:260px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04)">
+          <strong>Costos clave</strong>
+          <ul class="simple">
+            <li>Personal especializado</li>
+            <li>Infraestructura y materiales</li>
+            <li>Marketing y promoción</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" style="margin-top:28px">
+      <div class="small-title">Contacto / Inscripciones</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:280px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04)">
+          <p style="margin:0 0 10px;color:var(--muted)"><strong>Correo:</strong> contacto@campamentodeestrellas.co</p>
+          <p style="margin:0 0 10px;color:var(--muted)"><strong>Teléfono:</strong> +57 324 245 6655</p>
+          <p style="margin:0 0 10px;color:var(--muted)"><strong>Ubicación (base):</strong> Cota, Cundinamarca</p>
+          <p style="margin:0;color:var(--muted)">Para inscripciones y convenios con colegios, escríbenos o llena el formulario.</p>
+        </div>
+
+        <form style="flex:1;min-width:320px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04)" onsubmit="event.preventDefault(); alert('Gracias — recibimos tu mensaje. Nos contactaremos pronto.');">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input name="name" placeholder="Tu nombre" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+            <input name="email" placeholder="Correo" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+            <input name="phone" placeholder="Teléfono (opcional)" style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+            <textarea name="msg" placeholder="Mensaje / interés (p.ej. inscribir 2 jóvenes)" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e9ef"></textarea>
+            <button class="btn" type="submit">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Campamento de Estrellas — "Descubre la magia de brillar con tu propia luz"
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
